@@ -4,8 +4,8 @@ function newGame() {
         "pancakes"];
     /////Assign null value to all variables
     computerFood = breakfastFoods[Math.floor(Math.random() * breakfastFoods.length)];
-    guessesLeft = 15;
-    incorrectLetters = [];
+    // guessesLeft = 15;
+    // incorrectLetters = [];
     correctLetter = false;
     dashesAndCorrectGuesses=[];
     computerFoodSplit = computerFood.split("");

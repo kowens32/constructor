@@ -1,6 +1,9 @@
 
 var inputString = process.argv;
 var userChoices = inputString[2];
+var incorrectLetters = [];
+var guessesLeft = 15;
+
 function letterSelection () {
     var correctLetter = false;
     for (i = 0; i < computerFoodSplit.length; i++) {
@@ -8,14 +11,19 @@ function letterSelection () {
             correctLetter = true;
             dashesAndCorrectGuesses[i] = userChoices;
             console.log(dashesAndCorrectGuesses.join(" "));
-            console.log(userChoices);
-            //if user has selected correct choice, push letter to correct position in array
-            //  document.getElementById("currentWord").innerHTML = dashesAndCorrectGuesses.join(" ");
 
 
         }
     }
-}
+    if (!correctLetter) {
+//check if userchoice is not already within array, the subtract one from guesses left
+        if (incorrectLetters.indexOf(userChoices) < 0) incorrectLetters.push(userChoices) && guessesLeft--;
+        {
+            console.log("letters" +incorrectLetters.join(" "));
+            console.log("guesses" + guessesLeft);
+        }
 
+    }
+}
 
 module.exports = letterSelection;
