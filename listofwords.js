@@ -1,11 +1,10 @@
-breakfast foods
+var breakfastFoods = ["croissants", "bagels", "oatmeal","eggs","fruit","coffee","tea","waffles",
+"pancakes"];
 
-croissants
-bagels
-oatmeal
-eggs
-fruit
-coffee
-tea
-waffles
-pancakes
+
+
+
+
+
+
+
