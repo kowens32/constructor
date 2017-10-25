@@ -1,21 +1,29 @@
+var breakfastFoods = ["croissants", "bagels", "oatmeal","eggs","fruit","coffee","tea","waffles",
+    "pancakes"];
+var dashesAndCorrectGuesses = [];
 
-function newGame() {
-    var breakfastFoods = ["croissants", "bagels", "oatmeal","eggs","fruit","coffee","tea","waffles",
-        "pancakes"];
-    /////Assign null value to all variables
-    computerFood = breakfastFoods[Math.floor(Math.random() * breakfastFoods.length)];
-    // guessesLeft = 15;
-    // incorrectLetters = [];
-    correctLetter = false;
-    dashesAndCorrectGuesses=[];
-    computerFoodSplit = computerFood.split("");
-    for (i = 1; i < computerFood.length; i++) {
-        dashesAndCorrectGuesses.push("_");
-        console.log(computerFood)
+var newGame = function () {
+    this.correctLetter = false;
 
+
+
+/////Assign null value to all variables
+    this.computerFood = breakfastFoods[Math.floor(Math.random() * breakfastFoods.length)];
+    console.log('food' + computerFood)
+
+    this.computerFoodSplit = function () {
+        computerFood.split("");
+        console.log('333'+computerFood.split(""))
+        for (i =0; i < computerFood.length; i++) {
+            dashesAndCorrectGuesses.push("_");
+
+
+        }
     }
 
+    computerFoodSplit();
+    console.log('what is my food'+computerFood)
+    console.log('whatis my dash'+dashesAndCorrectGuesses)
 }
-
 
 module.exports = newGame;
