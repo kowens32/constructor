@@ -21,9 +21,9 @@ var newGame = function () {
     console.log('what is my food'+computerFood)
     console.log('whatis my dash'+dashesAndCorrectGuesses)
 
-}
+};
 
-var letterSelection = function (computerFood,dashesAndCorrectGuesses ) {
+var letterSelection = function (computerFood,dashesAndCorrectGuesses, userChoices) {
     this.correctLetter = false;
     this.guessesLeft = 15;
     this.test = function () {
@@ -44,7 +44,8 @@ var letterSelection = function (computerFood,dashesAndCorrectGuesses ) {
             }
         }
     }
-}
+};
+letterSelection();
 
 
 
