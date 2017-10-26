@@ -11,9 +11,10 @@ var inquirer = require('inquirer');
 
         }
     ]).then(function (user) {
-        newGame();
-     letterSelection(user.letter);
-     console.log('con'+user.letter);
+        letterSelection();
+       newGame();
+
+      console.log('con'+user.letter);
     });
 
 
