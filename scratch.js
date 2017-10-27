@@ -13,18 +13,15 @@ function newGame() {
         dashesAndCorrectGuesses.push("_");
         console.log(computerFood)
 
-    }
+
+}
 
 }
 
 
 function NewGame() {
 
-    this.correctLetter = false;
-
 }
-
-
 NewGame.prototype.dashing = function () {
     dashesAndCorrectGuesses=[];
 
@@ -33,7 +30,7 @@ NewGame.prototype.dashing = function () {
     for (i = 1; i < computerFood.length; i++) {
         dashesAndCorrectGuesses.push("_");
         console.log(computerFood)
-
+        console.log(dashesAndCorrectGuesses);
     }
 };
 
