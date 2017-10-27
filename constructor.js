@@ -1,4 +1,4 @@
-var newGame = require("./newGame.js").newGame;
+var newWord = require("./letter.js").newWord;
 var letterSelection = require("./newGame.js").letterSelection;
 var inquirer = require('inquirer');
 
@@ -12,7 +12,7 @@ var inquirer = require('inquirer');
         }
 
     ]).then(function (user) {
-        newGame();
+        newWord();
         letterSelection();
 
         // nextLetter();
