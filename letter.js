@@ -1,29 +1,35 @@
 
- var breakfastFoods = ["croissants", "bagels", "oatmeal","eggs","fruit","coffee","tea","waffles",
-    "pancakes"];
-
- var newWord;
- newWord = function (computerFood, computerFoodSplit, dashesAndCorrectGuesses) {
-
-     this.computerFood = computerFood;
-     this.computerFoodSplit = computerFoodSplit;
-     this.dashesAndCorrectGuesses = dashesAndCorrectGuesses;
+var letterSelection = function (trueLetter, falseLetter) {
+    this.correctLetter = false;
 
 
-     newWord.prototype.computerFood = function (breakfastFoods) {
-         breakfastFoods[Math.floor(Math.random() * breakfastFoods.length)];
-     };
-     console.log('wat is this ' + breakfastFoods)
-     newWord.prototype.computerFoodSplit = function () {
-         computerFood.split("");
+    letterSelection.prototype.trueLetter = function () {
+        for (i = 0; i < computerFoodSplit.length; i++) {
+            if (computerFoodSplit[i] === userChoices) {
+                this.correctLetter = true;
+                dashesAndCorrectGuesses[i] = userChoices;
+                console.log('places ' + dashesAndCorrectGuesses.join(" "));
+            }
+        }
+    };
 
-     };
+    letterSelection.prototype.falseLetter = function () {
 
-     newWord.prototype.dashesAndCorrectGuesses = function () {
-         for (i = 0; i < computerFood.length; i++) {
-             dashesAndCorrectGuesses.push("_");
-         }
-     };
+        if (!correctLetter) {
+            if (incorrectLetters.indexOf(userChoices) < 0) incorrectLetters.push(userChoices) && guessesLeft--;
+            {
+                console.log("letters " + incorrectLetters.join(" "));
+                console.log("guesses " + guessesLeft);
+            }
 
- };
-module.exports.newWord = newWord;
+            if (dashesAndCorrectGuesses.toString() === computerFoodSplit.toString()) {
+                //and one to user win and alert user
+                userwin++;
+                console.log('win ' + userWin);
+            }
+
+
+        }
+    }
+};
+ module.exports.letterSelection = letterSelection;

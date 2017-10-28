@@ -1,5 +1,5 @@
-var newWord = require("./letter.js").newWord;
-var letterSelection = require("./newGame.js").letterSelection;
+var newWord = require("./newGame.js").newWord;
+var letterSelection = require("./letter.js").letterSelection;
 var inquirer = require('inquirer');
 
 // var nextLetter = function() {
