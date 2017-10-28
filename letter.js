@@ -1,7 +1,8 @@
-
-var letterSelection = function (trueLetter, falseLetter) {
+var letterSelection;
+letterSelection = function (correctLetter, trueLetter, falseLetter) {
     this.correctLetter = false;
-
+this.falseLetter = falseLetter;
+this.trueLetter = trueLetter;
 
     letterSelection.prototype.trueLetter = function () {
         for (i = 0; i < computerFoodSplit.length; i++) {
