@@ -28,5 +28,26 @@ newWord = function (computerFood, computerFoodSplit, dashesAndCorrectGuesses) {
 };
 module.exports.newWord = newWord;
 
+class Word {
+    constructor(food) {
+        this.food = food;
+        this.foodArray = this.food.split('');
+        this.dashesArray = this.foodArray.map(letter => {
+            letter = '-';
+        })
+    }
+
+    getLetterIndex(letter) {
+        return this.foodArray.indexOf(letter);
+    }
+
+    replaceCorrectLetter(index, letter) {
+
+    }
+}
 
 
+let newWord = new Word(breakfastFoods[Math.floor(Math.random() * breakfastFoods.length)])
+
+
+let guess = newWord.getLetterIndex(process.argv[2])
