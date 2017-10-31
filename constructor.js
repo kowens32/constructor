@@ -1,6 +1,12 @@
-var newWord = require("./newGame.js").newWord;
-var letterSelection = require("./letter.js").letterSelection;
+var Word = require("./newGame.js");
+
 var inquirer = require('inquirer');
+
+var breakfastFoods = ["croissants", "bagels", "oatmeal","eggs","fruit","coffee","tea","waffles",
+    "pancakes"];
+
+let nodeWord = new Word(breakfastFoods[Math.floor(Math.random() * breakfastFoods.length)]);
+console.log(nodeWord);
 
 // var nextLetter = function() {
     inquirer.prompt([
@@ -12,13 +18,30 @@ var inquirer = require('inquirer');
         }
 
     ]).then(function (user) {
-        newWord();
-        letterSelection();
+        // getLetterIndex(user.letter) {
+        // return this.foodArray.indexOf(user.letter);
+        // if (indexOf(user.letter)!= -1) {
+        //     console.log(indexOf(user.letter))
+        // }
+        //
+        // };
 
-        // nextLetter();
+
+        });
+
+
+
+
+replaceCorrectLetter(index, letter)
+    foodArray.map(letter => {
+        foodArray[i] = letter;
+    })
+
+
+
 
         console.log('con' + user.letter);
-    });
+
 
 // }
 
