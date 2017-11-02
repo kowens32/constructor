@@ -6,41 +6,49 @@ var breakfastFoods = ["croissants", "bagels", "oatmeal","eggs","fruit","coffee",
     "pancakes"];
 
 let nodeWord = new Word(breakfastFoods[Math.floor(Math.random() * breakfastFoods.length)]);
-console.log(nodeWord);
+console.log(nodeWord)
+// let guess = newWord.getLetterIndex(process.argv[2]);
 
-// var nextLetter = function() {
-    inquirer.prompt([
-        {
-            type: 'input',
-            name: 'letter',
-            message: 'Guess a letter!'
-
-        }
-
-    ]).then(function (user) {
-        // getLetterIndex(user.letter) {
-        // return this.foodArray.indexOf(user.letter);
-        // if (indexOf(user.letter)!= -1) {
-        //     console.log(indexOf(user.letter))
-        // }
-        //
-        // };
+// console.log(nodeWord);
 
 
-        });
+// inquirer.prompt([
+//     {
+//         type: 'input',
+//         name: 'letter',
+//         message: 'Guess a letter!'
+//
+//     }
+//
+// ]).then(function (user) {
+//
+//
+//
+// });
 
 
-
-
-replaceCorrectLetter(index, letter)
-    foodArray.map(letter => {
-        foodArray[i] = letter;
-    })
-
-
-
-
-        console.log('con' + user.letter);
+// newWord.getLetterIndex(guess)
+// {
+//     return this.foodArray.indexOf(guess);
+// }
+//  {
+//
+// if (indexOf(user.letter)!= -1) {
+//     console.log(indexOf(user.letter))
+// }
+//
+// };
+//
+//
+// replaceCorrectLetter(index, letter)
+// foodArray.map(letter => {
+//     foodArray[i] = letter;
+// })
+//
+//
+//
+//
+// console.log('con' + user.letter);
 
 
 // }
