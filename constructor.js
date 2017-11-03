@@ -8,33 +8,39 @@ var breakfastFoods = ["croissants", "bagels", "oatmeal","eggs","fruit","coffee",
 let nodeWord = new Word(breakfastFoods[Math.floor(Math.random() * breakfastFoods.length)]);
 console.log(nodeWord)
 let dashes = nodeWord.dashesArray;
-let word = nodeWord.foodArray;
+let userWord = nodeWord.foodArray;
 let fillWord;
+let testWord;
 
 
-inquirer.prompt([
-    {
-        type: 'input',
-        name: 'letter',
-        message: 'Guess a letter!'
+    inquirer.prompt([
+        {
+            type: 'input',
+            name: 'letter',
+            message: 'Guess a letter!'
 
-    }
+        }
 
-]).then(function (user) {
+    ]).then(function (user) {
 
-    for (i = 0; i < word.length; i ++) {
-        if (word[i] === user.letter) {
-            dashes[i] = user.letter;
+        testWord = user.letter;
+        test(testWord);
+
+
+    });
+
+
+function test() {
+    for (i = 0; i < userWord.length; i++) {
+        if (userWord[i] === testWord) {
+            dashes[i] = testWord;
             fillWord = dashes.join(" ");
-            console.log(fillWord);
+            console.log('here', fillWord);
         }
     }
 
-
-});
-
+}
 
 
 
-// console.log(dashesAndCorrectGuesses.push("_"))
 module.exports = inquirer.prompt;
