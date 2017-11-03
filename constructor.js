@@ -13,16 +13,17 @@ let fillWord;
 let testWord;
 
 
+
     inquirer.prompt([
         {
             type: 'input',
             name: 'letter',
             message: 'Guess a letter!'
 
-        }
+        },
+
 
     ]).then(function (user) {
-
         testWord = user.letter;
         test(testWord);
 
@@ -30,17 +31,18 @@ let testWord;
     });
 
 
-function test() {
-    for (i = 0; i < userWord.length; i++) {
-        if (userWord[i] === testWord) {
-            dashes[i] = testWord;
-            fillWord = dashes.join(" ");
-            console.log('here', fillWord);
+    function test() {
+        for (i = 0; i < userWord.length; i++) {
+            if (userWord[i] === testWord) {
+                dashes[i] = testWord;
+                fillWord = dashes.join(" ");
+                return  console.log('here', fillWord);
+
+
+            }
+
         }
+
+
     }
 
-}
-
-
-
-module.exports = inquirer.prompt;
