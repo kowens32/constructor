@@ -14,6 +14,8 @@ let testWord;
 
 
 
+
+
     inquirer.prompt([
         {
             type: 'input',
@@ -25,24 +27,28 @@ let testWord;
 
     ]).then(function (user) {
         testWord = user.letter;
-        test(testWord);
-
 
     });
 
 
-    function test() {
+    function test(testWord) {
         for (i = 0; i < userWord.length; i++) {
             if (userWord[i] === testWord) {
                 dashes[i] = testWord;
                 fillWord = dashes.join(" ");
-                return  console.log('here', fillWord);
+                 console.log('here', fillWord);
 
-
+                }
             }
-
+        if (indexOf(userWord) > -1){
+            console.log('correct!');
         }
 
 
     }
+
+
+
+//look up while loop for input questions
+//https://stackoverflow.com/questions/29572797/is-there-a-way-to-do-a-while-loop-for-prompted-input-questions-bind-them-and-ha
 
