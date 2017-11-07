@@ -39,10 +39,26 @@ let testWord;
                 if (dashes.indexOf(testWord) > -1) {
                     fillWord = dashes.join(" ");
                     console.log('here', fillWord);
+                    console.log('?',dashes.indexOf(testWord));
+
                 }
                 }
 
                 }
+        inquirer.prompt([
+            {
+                type: 'input',
+                name: 'letter',
+                message: 'Guess a letter!'
+
+            },
+
+
+        ]).then(function (user) {
+            testWord = user.letter;
+            test(testWord);
+
+        });
     }
 
 
