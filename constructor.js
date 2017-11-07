@@ -11,6 +11,7 @@ let dashes = nodeWord.dashesArray;
 let userWord = nodeWord.foodArray;
 let fillWord;
 let testWord;
+let userGuess = 9;
 
 
 
@@ -38,10 +39,12 @@ let testWord;
                 dashes[i] = testWord;
                 if (dashes.indexOf(testWord) > -1) {
                     fillWord = dashes.join(" ");
-                    console.log('here', fillWord);
-                    console.log('?',dashes.indexOf(testWord));
-
+                    console.log(fillWord);
                 }
+                else
+                    console.log('incorrect!');
+                userGuess--;
+
                 }
 
                 }
@@ -52,7 +55,6 @@ let testWord;
                 message: 'Guess a letter!'
 
             },
-
 
         ]).then(function (user) {
             testWord = user.letter;
