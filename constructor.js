@@ -27,6 +27,7 @@ let testWord;
 
     ]).then(function (user) {
         testWord = user.letter;
+        test(testWord);
 
     });
 
@@ -35,16 +36,13 @@ let testWord;
         for (i = 0; i < userWord.length; i++) {
             if (userWord[i] === testWord) {
                 dashes[i] = testWord;
-                fillWord = dashes.join(" ");
-                 console.log('here', fillWord);
+                if (dashes.indexOf(testWord) > -1) {
+                    fillWord = dashes.join(" ");
+                    console.log('here', fillWord);
+                }
+                }
 
                 }
-            }
-        if (indexOf(userWord) > -1){
-            console.log('correct!');
-        }
-
-
     }
 
 
